@@ -1,25 +1,17 @@
-import logo from './logo.svg';
+
 import './App.css';
+import VerticalLinearStepper from "./stepperComponent/stepperComponent";
+import React from "react";
 
 function App() {
+
+    const [state, setState] = React.useState({});
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <div>
+          <VerticalLinearStepper state={state} setState={setState}/>
+      </div>
+     );
 }
 
 export default App;
